@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Blog Personal</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1d;
+            --text-color: #f5f5f5;
+            --accent-color: #f05454;
+            --section-bg: #2b2b2e;
+            --border-color: #c4c4c4;
+            --btn-hover-bg: #f05454;
+            --btn-hover-color: #ffffff;
+            --nav-bg: #1f1f23;
+            --nav-hover-bg: #f05454;
+            --nav-hover-color: #ffffff;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+       
+        nav {
+            background-color: var(--nav-bg);
+            padding: 10px 0;
+            position: relative;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--nav-hover-bg);
+            color: black;
+        }
+
+        
+        .hero {
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        
+        .section {
+            background-color: transparent;
+            margin: 40px 0;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .content iframe,
+        .content p {
+            width: 48%;
+        }
+
+        
+        .ruleta {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .slide {
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation: slide 12s infinite;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            25% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }
+            75% { transform: translateX(-75%); }
+            100% { transform: translateX(0%); }
+        }
+
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--accent-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 2px solid var(--accent-color);
+            border-radius: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: var(--btn-hover-bg);
+            color: var(--btn-hover-color);
+        }
+
+        
+        footer {
+            background-color: #1f1f23;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        
+        iframe {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .frameCalculadora {
+            height: 600px;
+        }
+
+        i{
+            font-size: 40px;
+            color: #25D366;
+            margin-right: 20px;
+        }
+
+        .fa-instagram{
+            color: #C13584;
+        }
+
+        .fa-tiktok{
+            color: #000000;
+        }
+
+        .enlaceRedes{
+            background-color: transparent;
+        }
+
+        .enlaceRedes:hover{
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="enlaceSecciones">
+        <div class="container">
+            <a href="#inicio">Inicio</a>
+            <a href="#seccion1">Fútbol y Programación</a>
+            <a href="#seccion2">Videojuegos</a>
+            <a href="#seccion3">Herramientas</a>
+            <a href="#seccion4">Google Sheets</a>
+            <a href="https://facebook.com/">Facebook</a>
+            <a href="https://instagram.com/">Instagram</a>
+            <a href="https://github.com/">GitHub</a>
+            <a href="https://gmail.com/">Gmail</a>
+            <a href="https://discord.gg/">Discord</a>
+        </div>
+    </nav>
+
+    <div class="ruleta">
+        <div class="slide">
+            <img src="imagesProyecto/carrousel1.jpg" alt="foto1">
+            <img src="imagesProyecto/carrousel2.jpg" alt="foto2">
+            <img src="imagesProyecto/carrousel3.jpg" alt="foto3">
+            <img src="imagesProyecto/carrousel4.jpg" alt="foto4">
+        </div>
+    </div>
+
+    <header class="hero" id="inicio">
+        <div class="container">
+            <h1>Mi Blog Personal</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="seccion1" class="section">
+            <h2>Fútbol y Programación</h2>
+            <div class="content">
+                <iframe src="https://www.youtube.com/embed/779Xhc-V0y0" allowfullscreen></iframe>
+                <p>Explora la fascinante intersección entre el fútbol y la programación. Descubre cómo la tecnología está transformando el deporte rey.</p>
+                <a href="#" class="btn">Volver al inicio</a>
+            </div>
+        </section>
+
+        <section id="seccion2" class="section">
+            <h2>Videojuegos</h2>
+            <div class="content">
+                <p>Sumérgete en el emocionante mundo de los videojuegos y la tecnología de vanguardia. Aprende sobre las últimas tendencias y cómo están moldeando nuestro futuro digital.</p>
+                <iframe src="https://www.youtube.com/embed/cNM4FasMERQ" allowfullscreen></iframe>
+                <a href="#" class="btn">Volver al inicio</a>
+            </div>
+        </section>
+
+        <section id="seccion3" class="section">
+            <h2>Herramientas</h2>
+            <div class="content">
+                <iframe class="frameCalculadora" src="CalculadoraJhosmar.html" allowfullscreen></iframe>
+                <p>Descarga nuestra calculadora avanzada, diseñada para simplificar tus tareas diarias y mejorar tu productividad.</p>
+            </div>
+            <a href="#" class="btn">Volver al inicio</a>
+            <a class="btn" href="file:///home/kouhz/Documents/HTML/CalculadoraJhosmar.html" download="CalculadoraJhosmar.pdf">Descargar calculadora</a>
+        </section>
+
+        <section id="seccion4" class="section">
+            <h2>Google Sheets</h2>
+            <div class="content">
+                <p>Optimiza tu flujo de trabajo con nuestras plantillas de Google Sheets. Perfectas para la gestión de proyectos y la organización personal.</p>
+                <iframe src="https://docs.google.com/spreadsheets/d/1kSmBz3mnyoYvT8bbu6vE13JYJCBdrHcP5_U3J8vh6UQ/edit?gid=0" allowfullscreen></iframe>
+                <a href="#" class="btn">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="enlaceRedes">
+            <a href="https://wa.me/" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </nav>
+        <p>&copy; 2024 Jhosmar Nina. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
